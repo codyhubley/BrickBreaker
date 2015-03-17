@@ -14,8 +14,7 @@ public class app {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println(";asdfal;");
+        MainFrame theMainFrame = new MainFrame();
     }
     
 }

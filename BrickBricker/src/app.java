@@ -14,7 +14,19 @@ public class app {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Splash SplashScreen = new Splash();
+        SplashScreen.setVisible(true);
+        
+        try{
+        Thread.sleep(3000);
+        }
+        
+        catch(Exception e){
+            e.printStackTrace();
+        }     
+        
+        SplashScreen.setVisible(false);
         MainFrame theMainFrame = new MainFrame();
-    }
-    
+        }
+
 }

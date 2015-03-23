@@ -20,8 +20,10 @@ public class MainMenuPanel extends JPanel implements ActionListener{
     JButton instructions;
     JButton exit;
     JLabel title;
+    MainFrame frame;
     
-    MainMenuPanel(){
+    MainMenuPanel(MainFrame frame){
+        this.frame = frame;
         play = new JButton("Play");
         instructions = new JButton ("Instructions");
         exit = new JButton("Exit");
@@ -33,6 +35,7 @@ public class MainMenuPanel extends JPanel implements ActionListener{
         add(exit);
         
         play.addActionListener(this);
+        exit.addActionListener(this);
     }
     
     public void actionPerformed(ActionEvent e){
@@ -40,11 +43,13 @@ public class MainMenuPanel extends JPanel implements ActionListener{
         GamePanel theGamePanel = new GamePanel();
         if(obj == play) 
           {
-            remove(this);
-            add(theGamePanel);
-            revalidate();
-            
+            frame.remove(this);
+            frame.add(theGamePanel);
+            frame.revalidate();            
           }
+        if(obj == exit){
+            System.exit(0);
+        }
     }
     
 }

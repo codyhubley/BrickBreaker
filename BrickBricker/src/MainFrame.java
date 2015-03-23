@@ -19,6 +19,8 @@ public class MainFrame extends JFrame {
         setLocation(280,15);
         setSize (950, 650);
         setVisible(true);
+        MainMenuPanel theMainMenu = new MainMenuPanel();
+        add(theMainMenu);
     }
     
 }
